@@ -17,6 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <spring-version>4.2.3.RELEASE</spring-version>
   </properties>
 
   <dependencies>
@@ -31,27 +32,27 @@
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-context</artifactId>
-          <version>5.0.6.RELEASE</version>
+          <version>${spring-version}</version>
       </dependency>
 
       <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-core</artifactId>
-          <version>5.0.6.RELEASE</version>
+          <version>${spring-version}</version>
       </dependency>
 
       <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-web</artifactId>
-          <version>5.0.6.RELEASE</version>
+          <version>${spring-version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
-          <version>5.0.6.RELEASE</version>
+          <version>${spring-version}</version>
       </dependency>
 
       <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -61,19 +62,41 @@
           <version>2.6</version>
       </dependency>
 
-      <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
       <dependency>
-          <groupId>commons-logging</groupId>
-          <artifactId>commons-logging</artifactId>
-          <version>1.2</version>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-slf4j-impl</artifactId>
+          <version>2.4.1</version>
+      </dependency>
+      <!--兼容log4j-->
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-1.2-api</artifactId>
+          <version>2.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-api</artifactId>
+          <version>2.4.1</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-core</artifactId>
+          <version>2.4.1</version>
+      </dependency>
+      <!--log4j2 异步appender须要-->
+      <dependency>
+          <groupId>com.lmax</groupId>
+          <artifactId>disruptor</artifactId>
+          <version>3.2.0</version>
       </dependency>
 
-
+      <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
       <dependency>
-          <groupId>log4j</groupId>
-          <artifactId>log4j</artifactId>
-          <version>1.2.12</version>
+          <groupId>redis.clients</groupId>
+          <artifactId>jedis</artifactId>
+          <version>2.9.0</version>
       </dependency>
+
 
   </dependencies>
 

@@ -1,6 +1,10 @@
 package com.asiainfo.util;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +16,8 @@ import java.util.List;
  * @Description:
  */
 public class FileReadUtil {
+
+    private static Logger LOGGER = LogManager.getLogger(FileReadUtil.class);
 
     /**
      *
@@ -50,6 +56,7 @@ public class FileReadUtil {
             IOUtils.closeQuietly(isr);
             IOUtils.closeQuietly(is);
         }
+        LOGGER.error(data.size()+"");
     }
 
     /**
@@ -125,5 +132,9 @@ public class FileReadUtil {
             IOUtils.closeQuietly(bis);
         }
         return charset;
+    }
+
+    public static void main(String[] args) {
+        FileReadUtil.readTxt("C:\\Users\\Administrator\\Desktop\\2018-7-11.txt");
     }
 }
